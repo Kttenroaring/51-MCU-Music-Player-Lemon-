@@ -12,6 +12,8 @@
 <div align="center">
   <video src="lemon_demo.mp4" width="600" controls></video>
   <p><b>实物演示：单片机驱动无源蜂鸣器演奏《Lemon》</b></p>
+<div align="center">
+  <video src="lemon_demo.mp4" width="600" controls></video>
 </div>
 
 ### 🛠️ 角色与职责 (Sole Developer)
