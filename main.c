@@ -1,6 +1,5 @@
 #include <reg52.h> 
 
-/* 类型定义，提高代码可读性 */
 typedef unsigned char uchar;
 typedef unsigned int  uint;
 
@@ -139,3 +138,4 @@ void timer0_isr() interrupt 1 {
     TL0 = timer0l; 
     beep = ~beep;  // 翻转电平产生声音
 }
+
