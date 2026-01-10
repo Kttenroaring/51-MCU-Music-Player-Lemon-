@@ -9,10 +9,8 @@
 本项目是基于 **STC89C52RC** 单片机开发的嵌入式音乐播放器。通过对底层定时器寄存器的精确配置，成功还原了米津玄师名曲《Lemon》的旋律。
 
 ### 🎬 演奏演示 (Video Demo)
-<div align="center">
   <video src="lemon_demo.mp4" width="600" controls></video>
   <p><b>实物演示：单片机驱动无源蜂鸣器演奏《Lemon》</b></p>
-<div align="center">
   <video src="lemon_demo.mp4" width="600" controls></video>
 </div>
 
