@@ -11,8 +11,12 @@
 
 ### 🎬 演奏演示 (Video Demo)
 
-<div align="center">
-  <video src="lemon_demo.mp4" width="600" controls></video>
+<div align
+
+https://github.com/user-attachments/assets/39c7959e-0a05-45df-8639-a5bf24537deb
+
+="center">
+ 
   <p><b>实物演示：单片机驱动无源蜂鸣器演奏《Lemon》</b></p>
 </div>
 
