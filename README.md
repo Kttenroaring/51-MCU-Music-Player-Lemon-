@@ -1,4 +1,3 @@
-# 51-MCU-Music-Player-Lemon-Lemon-
 # 51 MCU Music Player - 《Lemon》米津玄師 🍋
 # 基于 STC89C52RC 的单片机音乐演奏器
 
