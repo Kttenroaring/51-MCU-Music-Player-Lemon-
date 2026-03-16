@@ -1,44 +1,73 @@
-# 🍋 51 MCU Music Player - 《Lemon》 全栈开发项目
-## 基于 STC89C52RC 的软硬一体化音乐演奏系统
+# STC89C52 Embedded Audio & Hardware Prototype 🎶
 
-[简体中文](#cn-项目简介) | [English](#us-introduction)
+一个基于 8051 内核的全栈硬件项目，实现从 PCB 设计到固件开发的完整闭环。
+A full-stack hardware project based on 8051 core, realizing a complete closed-loop from PCB design to firmware development.
 
----
-
-## 🚀 CN 项目简介
-本项目不仅是一个嵌入式软件工程，更是一个完整的**硬件产品原型**。从底层 **8051 内核驱动**到 **PCB 电路设计**，实现了米津玄师《Lemon》副歌旋律的精确还原与实物化呈现。
-
-### 🎬 演示与成果 (Results)
-* **软件输出**：定时器 T0 驱动无源蜂鸣器输出高保真方波。
-* **硬件呈现**：自主设计并打样的专属 PCB 板，具备完善的电源管理与驱动电路。
+[简体中文](#-简体中文) | [English](#-english)
 
 ---
 
-### 🛠️ 全栈职责 (Full-Stack Responsibilities)
+## 🇨🇳 简体中文
+
+### 📋 项目简介
+本项目是一个嵌入式硬件原型系统。通过 **STC89C52RC** 微控制器精确控制定时器频率，驱动无源蜂鸣器实现音频信号的合成与实物化呈现。
+
+### 🛠️ 技术栈
+- **EDA 工具**: Altium Designer (原理图与 PCB 设计)
+- **IDE**: Keil uVision 5 (C51 固件开发)
+- **核心技术**: 定时器中断模拟 PWM, 频率查表法, PCB 信号完整性优化
+
+### ✨ 核心特性
 
 #### 1️⃣ 硬件工程 (Hardware Engineering)
-* **原理图设计**：基于 Altium Designer 绘制，集成 STC89C52 核心最小系统与低功耗驱动模块。
-* **PCB 布局**：双层板设计，优化信号回路，确保高频信号在音频输出时的稳定性。
-* **DFM 优化**：导出完整 Gerber 与 BOM 表，具备可量产性。
+- **原理图设计**: 集成 STC89C52 最小系统与低功耗三极管驱动模块。
+- **PCB 布局**: 双层板设计，优化信号回路，确保音频输出时的信号稳定性。
+- **生产准备**: 导出完整 Gerber 与 BOM 表，符合 **DFM (面向制造的设计)** 规范。
 
-#### 2️⃣ 嵌入式开发 (Embedded Firmware)
-* **精确频率控制**：建立音阶频率映射表（FREQH/L），实现多八度音域切换。
-* **中断算法**：利用定时器中断实现非阻塞式的乐谱数据解析。
-* **代码优化**：针对 8051 有限的 Flash 空间进行空间压缩，确保系统实时性。
+#### 2️⃣ 嵌入式固件 (Embedded Firmware)
+- **高精度频率控制**: 建立 16 位定时器重装载值映射表，覆盖多八度音域。
+- **非阻塞式调度**: 利用定时器 T0 中断实现乐谱解析，保证系统实时性。
+- **代码优化**: 针对 8051 存储空间进行优化，压缩数据结构以减少 Flash 占用。
 
----
-
-### 🧠 技术栈 (Tech Stack)
-* **EDA 工具**: Altium Designer (Schematic & PCB Design)
-* **IDE**: Keil uVision 5 (C51)
-* **核心技术**: 定时器中断模拟 PWM, 频率查表法, PCB 信号完整性优化。
+### 🚀 快速上手
+1. **硬件**: 参考 `/Hardware` 目录下的原理图进行焊接或打样。
+2. **软件**: 使用 Keil 5 打开 `/Firmware` 文件夹中的工程文件，编译生成 `.hex`。
+3. **烧录**: 使用 STC-ISP 工具将固件下载至单片机。
 
 ---
 
-## 🌐 US Introduction
-A full-stack embedded solution featuring an **STC89C52RC** MCU. This project covers the entire lifecycle from **Circuit Design (PCB)** to **Firmware Development**.
+## 🇺🇸 English
 
-### 🔧 Engineering Highlights
-* **Integrated Design**: Includes custom PCB layouts and optimized schematics in the `Hardware/` directory.
-* **Firmware Precision**: Real-time melody synthesis using Timer-driven square wave generation.
-* **Production Ready**: Optimized for DFM (Design for Manufacturing) standards.
+### 📋 Introduction
+This project is an integrated embedded hardware prototype. It utilizes the **STC89C52RC** MCU to precisely control timer frequencies, driving a passive buzzer to achieve real-time melody synthesis.
+
+### 🛠️ Tech Stack
+- **EDA Tools**: Altium Designer (Schematic & PCB Design)
+- **IDE**: Keil uVision 5 (C51 Firmware Development)
+- **Key Tech**: Timer Interrupt PWM Simulation, Frequency Look-up Table, Signal Integrity Optimization.
+
+### ✨ Key Features
+
+#### 1️⃣ Hardware Engineering
+- **Schematic Design**: Features an STC89C52 minimal system and a low-power transistor driver module.
+- **PCB Layout**: 2-layer board design with optimized signal loops for stable audio output.
+- **Production Ready**: Full Gerber and BOM export, following **DFM (Design for Manufacturing)** standards.
+
+#### 2️⃣ Embedded Firmware
+- **Precision Frequency Control**: 16-bit timer reload mapping table covering multi-octave ranges.
+- **Non-blocking Scheduling**: Real-time melody parsing via Timer T0 interrupt logic.
+- **Resource Optimization**: Optimized data structures to minimize Flash footprint on the 8051 architecture.
+
+### 🚀 Quick Start
+1. **Hardware**: Refer to the schematics in the `/Hardware` directory for PCB fabrication.
+2. **Software**: Open the project in `/Firmware` using Keil 5 and build the `.hex` file.
+3. **Flashing**: Use the STC-ISP tool to download the firmware to your microcontroller.
+
+---
+
+## 📄 License
+MIT License - see LICENSE file for details
+
+## ⭐ Support
+如果这个项目对你有帮助，欢迎点个 Star！
+If you find this project helpful, please consider giving it a star!
