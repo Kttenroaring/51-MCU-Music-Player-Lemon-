@@ -17,6 +17,9 @@ A full-stack hardware project based on 8051 core, realizing a complete closed-lo
 - **IDE**: Keil uVision 5 (C51 固件开发)
 - **核心技术**: 定时器中断模拟 PWM, 频率查表法, PCB 信号完整性优化
 
+### 🎬 演示与成果 (Results)
+![Project Demo](lemon_demo.mp4)
+
 ### ✨ 核心特性
 
 #### 1️⃣ 硬件工程 (Hardware Engineering)
