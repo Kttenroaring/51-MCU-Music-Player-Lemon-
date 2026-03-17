@@ -18,7 +18,12 @@ A full-stack hardware project based on 8051 core, realizing a complete closed-lo
 - **核心技术**: 定时器中断模拟 PWM, 频率查表法, PCB 信号完整性优化
 
 ### 🎬 演示与成果 (Results)
-![Project Demo](lemon_demo.mp4)
+<div align="center">
+  <h3>🎬 项目实物演示 (Project Demo)</h3>
+  <video src="lemon_demo.mp4" width="800px" controls>
+    您的浏览器不支持视频播放，请直接下载视频查看。
+  </video>
+</div>
 
 ### ✨ 核心特性
 
